@@ -1,7 +1,4 @@
 
-.header{
-    height: 800px;
-}
 
 .header-center {
     display: flex;
@@ -75,4 +72,8 @@
     max-width: 100%;
     height: auto;
     
+}
+
+
+.header{
 }

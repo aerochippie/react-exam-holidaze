@@ -10,7 +10,9 @@ export const Header = () => {
     // console.log(location);
     return (
         <div className='header'>
-
+<div className="header-image">
+                <img src="/img/hero_2.jpg" alt="" />
+            </div>
             <div className="header-container">
 
 
@@ -37,9 +39,7 @@ export const Header = () => {
 
 
             </div>
-            <div className="header-image">
-                <img src="/img/hero_2.jpg" alt="" />
-            </div>
+            
         </div>
 
     )
