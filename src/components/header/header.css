@@ -1,0 +1,78 @@
+
+.header{
+    height: 800px;
+}
+
+.header-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header-hero-text h1{
+    color: white;
+    font-size: 3.8em;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    letter-spacing: -2px;
+    line-height: 1em;
+}
+
+.header-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    width: 80%;
+    border-radius: 0.6em;
+    margin: 0.5em;
+    padding: 2.2em;
+}
+
+.header-inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 10em;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-inputs label {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.header-inputs label input {
+    border-radius: 1em;
+    border: solid 1px rgb(26, 26, 26);
+    padding: 0.3em;
+    margin: 1em 0 0 0;
+}
+
+.header-search button {
+    background-color: rgb(37, 191, 193);
+    color: white;
+    width: 20%;
+    border-radius: 2em;
+    border: none;
+    cursor: pointer;
+    padding: 0.8em;
+}
+
+.header-image {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.header-image img {
+    max-width: 100%;
+    height: auto;
+    
+}
