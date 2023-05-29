@@ -8,7 +8,7 @@ import './card.css'
 
 
 export const Card = (props) => {
-    const { name, country, price, wifi, parking, breakfast, pets, description, image } = props;
+    const { id, name, country, price, wifi, parking, breakfast, pets, description, image } = props;
     return (
        <> 
             <div className="card-container">

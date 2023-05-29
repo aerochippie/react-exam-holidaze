@@ -14,10 +14,10 @@ export const Navbar = () => {
                     <div className="nav-links">
                         
                     <Link to="/" > Home </Link> 
-                        <a href='/'> Venues </a>
+                        <a href='/Venues'> Venues </a>
                         <a href='/'> About </a>
                         <Link to="/Login" > Login   <AiOutlineLogin/>  </Link> 
-                        <a href='/'>  <BiUserCircle/>  </a>
+                        <a href='/Dashboard'>  <BiUserCircle/>  </a>
                     </div>
                     <div className="nav-logo">
                         <img src="/img/logo_black_fill.png" alt="" />

@@ -1,0 +1,11 @@
+.hidden{
+    display: none
+}
+
+.show-profile-update{
+    display: block;
+}
+
+.edit-icon{
+    cursor: pointer;
+}

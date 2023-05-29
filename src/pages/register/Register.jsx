@@ -95,7 +95,7 @@ export const Register = () => {
 
   }
 
-
+console.log(name, email, password, type)
   return (
     <div className="login">
       <div className="login-container">

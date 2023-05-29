@@ -8,22 +8,44 @@ export const PopularDestinations = () => {
 
 
     
-  const VENUES_URL = "/api/v1/holidaze/venues?limit=3"
+  const VENUES_URL = "/api/v1/holidaze/profiles/MyRoomie/venues"
   const [data, setData] = useState([])
+  const [japan,setJapan] = useState([])
 
 
 useEffect (() => {
   axios.get(VENUES_URL)
   .then(res => setData(res.data))
   .catch(err => console.log(err));
-  console.log(data)
- 
+//   let filteredJapan = data.filter((data)=> data.name === "japan")
+console.log(data)
+setJapan(data.filter((data) =>{
+  return data.name == "Japan"
+}))
+
 },[])
 
+console.log(japan)
+
+
+// const japanFilter = wifi =>{
+//   setJapan(
+//     data.filter( data =>{
+//       return data.meta.wifi === true
+//     })
+//   )
+// } 
+
+// const filtered = data.filter(data => {
+//   return data.name === 'japan';
+// });
+
+// console.log(filtered);
+// console.log(data[1].name)
 
   return (
-    <> 
-    <h2> Popular destinations</h2>
+    <div> 
+    {/* <h2> Popular destinations</h2>
     <div className="cards"> 
    {data.map ((data) => {
     return <Card
@@ -41,7 +63,30 @@ useEffect (() => {
     
     />
    })}
+</div> */}
+
+{data.filter(data => {
+  return data.name === 'japan'
+})
+.map(item => {
+  return (
+    <>
+    <p> {item.name}</p>
+    <p> hello </p>
+    <p> hello </p>
+    <p> hello </p>
+    <p> hello </p>
+    <p> hello </p>
+    <p> hello </p>
+    <p> hello </p>
+    <p> hello </p>
+    <p> hello </p>
+    </>
+  )
+})
+
+}
+
 </div>
-</>
   )
 }

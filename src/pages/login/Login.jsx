@@ -22,6 +22,8 @@ const handleSubmit = async (e)=> {
       { headers: { "Content-Type": "application/json" } }
     );
     localStorage.setItem('accessToken', response.data.accessToken)
+    localStorage.setItem('isManager', response.data.venueManager)
+    localStorage.setItem('name', response.data.name)
     console.log(localStorage);
     console.log(response.data.accessToken);
     response.status === 200 && navigate("/")
