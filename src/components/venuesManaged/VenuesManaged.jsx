@@ -8,7 +8,7 @@ export const VenuesManaged = () => {
   
     const username = localStorage.getItem("name")
     const PROFILE_VENUES_URL = `/api/v1/holidaze/profiles/${username}/venues`
-    const [popUp, setPopUp] = useState("hidden")
+    
     const [data, setData] = useState([])
 
 
@@ -23,10 +23,6 @@ export const VenuesManaged = () => {
 
 
 
-    const handleDeletePop = () => {
-        popUp === "hidden" ? setPopUp("show-profile-update") : setPopUp("hidden")
-    }
-
     const [isOpen, setisOpen] = useState(false)
     
     const [isOpen2, setisOpen2] = useState(false)
@@ -40,14 +36,13 @@ export const VenuesManaged = () => {
         setisOpen2(!isOpen2)
     }
 
-   
   return (
  <>
             {data.map((data) => {
                 
 
                 return (
-                <div className="container" key={data.index}>  
+                <div className="container">  
                 <Card key={data.id}
                 id={data.id}
                 name={data.name}
@@ -63,11 +58,11 @@ export const VenuesManaged = () => {
                 
                     <div className="buttons-group">
 
-                        <div className="group-1" venueid={data.id}>
-                            <button onClick={togglePopUp2}> edit </button>
+                        <div className="group-1">
+                            <button  id={data.id} onClick={togglePopUp2}> edit </button>
                             <button onClick={togglePopUp}> delete</button>
               
-                {  
+                            {  
                 isOpen && <DeletePop
               handleClose={togglePopUp}
               venueid={venueId}

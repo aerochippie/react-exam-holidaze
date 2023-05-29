@@ -1,5 +1,6 @@
 .footer-container {
-    background-color: blueviolet;
+    background-color:   #2AC2C2  ;
+    color: white;
 }
 
 .footer-top {
@@ -16,6 +17,7 @@
 .footer-image img {
     max-width: 100%;
     height: auto;
+    opacity: 50%;
 }
 .newsletter{
     display: flex;
@@ -25,7 +27,14 @@
     align-items: center;
 }
 
-
+.newsletter h3{
+    font-size: 2em;
+    text-align: right;
+}
+.newsletter p{
+    font-size: 0.8em;
+    text-align: right;
+}
 
 .footer-menu {
     display: flex;
@@ -45,8 +54,29 @@
 
 .footer-menu ul {
     width: 15em;
+    list-style-type: none
+    ;
 }
-
+.footer-menu a {
+    text-decoration: none;
+    color: white;
+}
 .footer-copy{
     text-align: center;
+    font-size: 0.6em;
+    opacity: 80%;
+}
+.arrow-icon{
+    padding: 1em;
+}
+
+.sign-up input {
+    border: none;
+    padding: 1em;
+}
+
+.newsletter button {
+    padding: 1em;
+    border: none;
+    width: 16%;
 }

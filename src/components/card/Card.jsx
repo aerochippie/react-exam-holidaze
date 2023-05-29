@@ -33,16 +33,17 @@ export const Card = (props) => {
                         {pets === true && <MdPets />}
                         {parking === true && <FaParking />}
                         {breakfast === true && <MdOutlineFastfood />}
-
+                        <span> {price}$ / Night</span>
                     </div>
-                    <span> {price}$</span>
+                   
                 </div>
                 <div className="card-bottom">
                     <p> {description} </p>
-                </div>
-                <div className="card-button">
+                    <div className="card-button">
                     <button onClick={handleClick}> Details </button>
                 </div>
+                </div>
+               
             </div>
           
             </>

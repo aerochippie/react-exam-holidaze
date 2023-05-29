@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import "./footer.css"
+import { FiArrowRight } from 'react-icons/fi';
 
 
 export const Footer = () => {
@@ -19,14 +20,13 @@ export const Footer = () => {
         <p> sign up for the newsletter</p>
     </div>
     <div className="arrow-icon">
-        icon
+        <FiArrowRight/>
     </div>
     <div className="sign-up">
         <label htmlFor="">
         <input type="text" placeholder='Email' />
         </label>
     </div>
-    <button> Sign up </button>
 </div>
 <div className="footer-image">
 

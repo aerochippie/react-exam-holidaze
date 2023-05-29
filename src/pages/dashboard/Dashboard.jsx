@@ -9,6 +9,7 @@ import { Profile } from '../../components/profile/Profile';
 import { ProfileUtils } from '../../components/profileUtils/ProfileUtils';
 import { VenuesManaged } from '../../components/venuesManaged/VenuesManaged';
 import { Footer } from '../../components/footer/Footer';
+import { ProfileBookings } from '../../components/profileBookings/ProfileBookings';
 
 export const Dashboard = () => {
 
@@ -35,6 +36,8 @@ export const Dashboard = () => {
             {isManager === "false" &&
                 <>
                     <Profile />
+                    <h2> You have upcoming bookings at venue(s):</h2>
+                    <ProfileBookings/>
                     <p> Customer</p>  <button onClick={handleLogout}> log out  </button>
 
                 </>

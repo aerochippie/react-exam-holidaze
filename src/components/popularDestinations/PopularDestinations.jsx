@@ -46,10 +46,10 @@ useEffect(() => {
 
 
   return (
-    <div> 
+    <div className='cards-container'> 
    
 
-<h2> Popular destinations</h2>
+<h2> <b><i>  Popular </i></b> destinations</h2>
     <div className="cards"> 
    {beach?.map ((data) => {
     return <Card
@@ -68,7 +68,7 @@ useEffect(() => {
     />
    })}
 </div>
-<h2> Japan trip destinations</h2>
+<h2> <b><i>Japan trip</i></b> destinations</h2>
 <div className="cards"> 
    {japan?.map ((data) => {
     return <Card
@@ -87,7 +87,7 @@ useEffect(() => {
     />
    })}
 </div>
-<h2> Relaxing nature destinations</h2>
+<h2> <b><i>Relaxing nature </i></b> destinations</h2>
 <div className="cards"> 
    {nature?.map ((data) => {
     return <Card

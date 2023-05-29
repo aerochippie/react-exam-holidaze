@@ -10,7 +10,7 @@ import { MdOutlineAdd } from "react-icons/md"
 export const EditPop =  (props) => {
 
     
-    const { venueid, handleClose, venuedata} = props;
+    const { venueid, handleClose, venuedata,className} = props;
     const oldVenue = venuedata.data
 
     const EDITVENUE_URL = `/api/v1/holidaze/venues/${venueid}`
@@ -82,7 +82,7 @@ console.log(newVenue)
     }
 
     return (
-        <div>
+        <div className={className}>
             <div>
                 <div className="add-venue-form-container">
                     <div className="left">

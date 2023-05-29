@@ -1,0 +1,16 @@
+.list-container .list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.list-container{
+    background-color: white;
+    padding: 8em 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

@@ -72,13 +72,17 @@ export const List = () => {
             <div className="search-container">
                 <div className="input-container">
 
-                    <input type="text" placeholder='search' onChange={(e) => setSearch(e.target.value)} />
 
                 </div>
-                <div className="meta-filter-container"></div>
+            
             </div>
 
             <div className="list-container">
+            <div className="input-container">
+
+<input type="text" placeholder='search' onChange={(e) => setSearch(e.target.value)} />
+
+</div>
                 <div className="list">
                     {(() => {
                         if (search === '') {

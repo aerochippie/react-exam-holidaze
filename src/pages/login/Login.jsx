@@ -4,6 +4,7 @@ import { AiFillGoogleSquare } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { AiFillFacebook } from 'react-icons/ai';
 import axios from "../../api/axios"
+import "./login.css"
 
 export const Login = () => {
 
@@ -49,7 +50,6 @@ const handleSubmit = async (e)=> {
   return (
     <div className="login">
       <div className="login-container">
-        <div className="login-panel">
           <div className="login-logo">
             <img src="/img/logo_black_fill.png" alt="" />
           </div>
@@ -61,44 +61,43 @@ const handleSubmit = async (e)=> {
           <div className="login-inputs">
           <span className={!errorMsg === '' ? "hide" : "show"}> {errorMsg} </span>
             <div className="field">
-            <label htmlFor='email'>Email
+            <label htmlFor='email'>Email</label>
               <input type="text"
                 id="email"
                 autoComplete='off'
                 onChange={(e) => setEmail(e.target.value)}
                 required
-   /></label>
+   />
             </div>
             
             
             <div className="field">
-            <label htmlFor='password'>Password
+            <label htmlFor='password'>Password</label>
               <input
                 type="password"
                 id="password"
                 onChange={(e) => setPassword(e.target.value)}
                 required
-   /></label>
+   />
             </div>
 
           </div>
           <div className="login-button">
-            <button disabled={!email || !password ? true : false} onClick={handleSubmit}> login </button>
+            <button disabled={!email || !password ? true : false} onClick={handleSubmit}> Login </button>
           </div>
           <div className="login-register">
-            <span> Don't have an account? <Link to={"/Register"}> Register here </Link> </span>
+            <span> Don't have an account? <Link to={"/Register"} className="link"> Register here </Link> </span>
           </div>
-
-          <Link to={"/"}> back home</Link>
+   <div className="home-link" >   <Link to={"/"} className="home-link"> back home</Link>  
+           </div> 
 
 
           <div className="login-links">
             <a href='/'> <AiFillGoogleSquare /></a>
-            <a href='/'><AiFillLinkedin /></a>
+            <a href='/'> <AiFillLinkedin /></a>
             <a href='/'> <AiFillFacebook /></a>
           </div>
         </div>
       </div>
-    </div>
   )
 }

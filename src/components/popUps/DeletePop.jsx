@@ -5,7 +5,7 @@ import axios from "../../api/axios"
 
 export const DeletePop = (props) => {
 
-  const { venueid, handleClose} = props;
+  const { venueid, venueName, handleClose,className} = props;
   const DELETE_VENUES_URL = `/api/v1/holidaze/venues/${venueid}`
   const handleDelete = async () => {
 
@@ -18,12 +18,12 @@ export const DeletePop = (props) => {
   return (
 
 
-    <div className="delete-prompt">
+    <div className={className} id={venueid}>
 
 
       <h4> Careful! </h4>
       <p> Are you sure you want to <strong> delete</strong> venue :</p>
-      <span> Venue Name </span>
+      <span> {venueName} </span>
 
 
       <button className='btn-close' onClick={handleDelete} > Delete </button>

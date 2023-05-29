@@ -3,4 +3,18 @@
     flex-direction: row ;
     align-items: center;
     justify-content: center;
+    margin: 3em;
+
+}
+
+.cards-container{
+    background-color: white;
+    margin-top: 12em;
+    padding-top: 4em ;
+}
+
+.cards-container h2{
+    font-size: 3em;
+    font-weight: 700;
+    padding: 1em;
 }

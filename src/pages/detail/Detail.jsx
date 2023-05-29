@@ -1,5 +1,7 @@
 import React, { useEffect, useState} from 'react'
+import dayjs from 'dayjs';
 import { useParams } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from "../../api/axios"
 import { Navbar } from '../../components/navbar/Navbar'
 import { Header } from '../../components/header/Header'
@@ -10,12 +12,16 @@ import { MdPets } from 'react-icons/md';
 import { FaParking } from 'react-icons/fa';
 import { MdOutlineFastfood } from 'react-icons/md';
 import { GiPerson } from 'react-icons/gi';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 export const Detail = () => {
-
+    const navigate = useNavigate();
     const params = useParams()
     const id = (JSON.parse(JSON.stringify(params.id)))
     const DETAIL_URL = `/api/v1/holidaze/venues/${id}`
+    const BOOK_URL = `/api/v1/holidaze/bookings`
     const [data, setData] = useState([])
     const [location, setLocation] = useState([])
     const [meta, setMeta] = useState([])
@@ -30,9 +36,33 @@ export const Detail = () => {
           })
           .catch((error) => console.log(error));
       }, []);
-      
+      const [dateFrom, setDateFrom] = useState([])
+      const [dateTo, setDateTo] = useState([])
+      const [guests, setGuests] = useState([])
 
-     
+      const formatDateFrom = dayjs(dateFrom.$d).toJSON()
+      const formatDateTo = dayjs(dateTo.$d).toJSON()
+
+     const newBooking = {
+        dateFrom : formatDateFrom,
+        dateTo: formatDateTo,
+        guests: guests,
+        venueId: id
+      }
+      console.log(newBooking)
+
+const handleBook = async () => { 
+    try {
+        const response = await axios.post(BOOK_URL, newBooking
+        );
+        console.log(response);
+        response.status === 201  && navigate("/Dashboard");
+
+    }
+    catch (err) {
+        console.log(err.response)
+    }
+ }
 
   return (
     <> 
@@ -66,7 +96,25 @@ export const Detail = () => {
         </div>
         <div className="detail-buttons">
             <button> Calendar </button>
-            <button> Book now </button>
+            
+
+            <div className="book-now">
+                <p> Book this venue</p>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <p> date from : </p>
+           
+            <DatePicker  onChange={(newValue) => setDateFrom(newValue)} />
+
+            <p> date to : </p>
+           
+           <DatePicker   onChange={(newValue) => setDateTo(newValue)}/>
+            </LocalizationProvider>
+
+            <label htmlFor="maxGuests"> guests: {guests}
+            <input type="range" min="0" max="100"  value={guests} placeholder='guests' id="maxGuests" onChange={(e) => { setGuests(e.target.valueAsNumber) }} />
+            </label>
+            <button onClick={handleBook}> Book now </button>
+            </div>
         </div>
     </div>
     <Footer/>

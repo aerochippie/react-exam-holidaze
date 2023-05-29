@@ -1,0 +1,117 @@
+.login{
+    background-image: url('/public/img/hero_image.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container{
+    width: 30vw;
+    background-color: white;
+    border-radius: 1.7em;
+    box-shadow: 3px 2px 15px rgba(0, 0, 0, 0.424); 
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-link a{
+    color: blue;
+    margin: 10em;
+}
+.login-logo{
+width: 30%;
+margin: 2em;
+align-self: center;
+}
+
+.login-panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-logo img{
+    max-width: 100%;  
+
+}
+
+.login-inputs {
+  width: 15em;                                                                                                                                                                                                                                                                                                                        
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+
+}
+
+.field input{
+background-color: rgba(149, 149, 149, 0.318);
+border:none;
+padding: 1em;
+margin:0.5em 0 0.5em 0;
+width: 100%;
+}
+
+.login-button {
+
+}
+
+.login-button button{
+    background-color: blue;
+    padding: 1em 2em 1em 2em;
+    border-radius: 4em;
+    width: 100%;
+    border: none;
+    color: white;
+    font-weight: 500;
+}
+.login-register{
+    font-size: smaller;
+}
+
+.login-register a {
+    font-weight: 700;
+}
+
+.back-home a {
+    font-size: smaller;
+    font-weight: 600;
+    color: black;
+}
+
+.radio-group input {
+    margin: 1em;
+}
+.radio-group  {
+   text-align: center;
+}
+
+#passwordnote{
+    background-color: white;
+}
+
+#uidnote{
+    background-color: white;
+}
+#emailnote{
+    background-color: white;
+}
+
+.login-button{
+    margin: 1em;
+}
+
+.login a{
+    text-decoration: none;
+    color: black;
+}
+

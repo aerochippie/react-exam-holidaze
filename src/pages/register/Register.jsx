@@ -126,7 +126,7 @@ console.log(name, email, password, type)
                 aria-describedby='emailnote'
               />
               <p id="emailnote" className={emailFocus && email && !validEmail ? "show" : "hide"}>
-                heres the note 14:55 </p>
+                Must be a "@noroff.no" email </p>
             </div>
 
 
@@ -151,7 +151,7 @@ console.log(name, email, password, type)
                 aria-describedby='uidnote'
               />
               <p id="uidnote" className={nameFocus && name && !validName ? "show" : "hide"}>
-                heres the note 14:55 </p>
+                Must be at least 4 characters long </p>
             </div>
 
 
@@ -174,12 +174,13 @@ console.log(name, email, password, type)
                 onBlur={() => setPasswordFocus(false)}
                 aria-describedby='passwordnote'
               />
-              <p id="passwordnote" className={passwordFocus && !validPassword ? "show" : "hide"}> heres the note 14:55 </p>
+              <p id="passwordnote" className={passwordFocus && !validPassword ? "show" : "hide"}> Must  at least have 1 special character, number and capital letter </p>
             </div>
-            <div>
+            <div className='radio-group'>
               <span> I am a :</span>
-              <input type="radio" name="radio-group" onChange={handleCustomer} /> Customer
-              <input type="radio" name="radio-group" onChange={handleManager} /> Manager
+              <div className=""> <input type="radio" name="radio-group" onChange={handleCustomer} /> Customer
+              <input type="radio" name="radio-group" onChange={handleManager} /> Manager  </div>
+             
             </div>
 
 
