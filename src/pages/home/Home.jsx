@@ -13,7 +13,6 @@ export const Home = () => {
     <Navbar />
     <Header />
     <PopularDestinations/>
-    <PopularDestinations/>
     <Footer/>
     </>
   )

@@ -34,8 +34,8 @@ export const ProfileUtils = () => {
         description: description,
         price: price,
         maxGuests: maxGuests,
-        media:
-            media
+        media:[
+            media]
         ,
         rating: rating,
         meta: {
@@ -136,7 +136,7 @@ console.log(newVenue)
 
                         <div className="field">
                             <label htmlFor="images"> Images (Urls)
-                                <textarea type="" placeholder='image(s) url' id="images" onChange={(e) => { setMedia(e.target.value) }} />
+                                <input type="text" placeholder='image(s) url' id="images" onChange={(e) => { setMedia(e.target.value) }} />
                             </label>
                         </div>
 
