@@ -47,7 +47,7 @@ export const VenuesManaged = () => {
                 
 
                 return (
-                <div className="container">  
+                <div className="container" key={data.index}>  
                 <Card key={data.id}
                 id={data.id}
                 name={data.name}

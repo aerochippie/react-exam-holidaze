@@ -190,7 +190,9 @@ console.log(name, email, password, type)
           </div>
           <div className="login-register">
             <span> Don't have an account? <Link to={"/Login"}> Log in here </Link> </span>
+           
           </div>
+          <Link to={"/"}> back home</Link>
           <div className="login-links">
             <a href='#'> <AiFillGoogleSquare /></a>
             <a href='#'><AiFillLinkedin /></a>

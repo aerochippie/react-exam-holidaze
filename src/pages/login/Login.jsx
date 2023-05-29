@@ -89,7 +89,7 @@ const handleSubmit = async (e)=> {
             <span> Don't have an account? <Link to={"/Register"}> Register here </Link> </span>
           </div>
 
-
+          <Link to={"/"}> back home</Link>
 
 
           <div className="login-links">

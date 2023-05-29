@@ -13,12 +13,16 @@ export const PopularDestinations = () => {
   const [japan,setJapan] = useState([])
   const [beach,setBeach] = useState()
   const [nature,setNature] = useState()
-
+  
+  const config = {  headers: {
+    Authorization : `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTg2NSwibmFtZSI6Ik15Um9vbWllIiwiZW1haWwiOiJteXJvb21pZUBub3JvZmYubm8iLCJhdmF0YXIiOiJodHRwczovL21lZGlhLmlzdG9ja3Bob3RvLmNvbS9pZC85NTMwNjk3NzQvcGhvdG8vY29yZ2ktZG9nLXNtaWxlLWFuZC1oYXBweS1pbi1zdW1tZXItc3VubnktZGF5LmpwZz9zPTE3MDY2N2Emdz0wJms9MjAmYz1yRE5DS1hsTmlrZjRfQmYzWkszbUlQV2pWVi1jRDlYUzJXTmJiRWhVMzM0PSIsInZlbnVlTWFuYWdlciI6dHJ1ZSwiaWF0IjoxNjg1MzcxNjM4fQ.sYj8JLS4hIsEoyA8Q_hlPwDHIcO0UIC7sxNYb7MQ0FE`
+    }}
 
 
 useEffect(() => {
   axios
-    .get(VENUES_URL)
+    .get((VENUES_URL), config
+     )
     .then((result) => {
       console.log(result.data);
 

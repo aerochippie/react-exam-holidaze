@@ -5,10 +5,14 @@ import { MdPets } from 'react-icons/md';
 import { FaParking } from 'react-icons/fa';
 import { MdOutlineFastfood } from 'react-icons/md';
 import './card.css'
-
+import { Navigate, useNavigate } from "react-router-dom";
 
 export const Card = (props) => {
     const { id, name, country, price, wifi, parking, breakfast, pets, description, image } = props;
+    const navigate = useNavigate();
+    function handleClick(){
+        navigate(`/detail/${id}`)
+    }
     return (
        <> 
             <div className="card-container">
@@ -37,7 +41,7 @@ export const Card = (props) => {
                     <p> {description} </p>
                 </div>
                 <div className="card-button">
-                    <button> Details </button>
+                    <button onClick={handleClick}> Details </button>
                 </div>
             </div>
           

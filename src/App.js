@@ -5,6 +5,7 @@ import {Register} from "./pages/register/Register"
 import "./App.css"
 import { Venues } from "./pages/venues/Venues";
 import { Dashboard } from "./pages/dashboard/Dashboard";
+import { Detail } from "./pages/detail/Detail";
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Route path="/register" element={<Register/>} />
       <Route path="/venues" element={<Venues/>} />
       <Route path="/dashboard" element={<Dashboard/>} />
+      <Route path="/detail/:id" element={<Detail/>} />
     </Routes>
     
     </BrowserRouter>
