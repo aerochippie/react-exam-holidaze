@@ -17,7 +17,7 @@ export const Navbar = () => {
                         <a href='/Venues'> Venues </a>
                         <a href='/'> About </a>
                         <Link to="/Login" > Login   <AiOutlineLogin/>  </Link> 
-                        <a href='/Dashboard'>  <BiUserCircle/>  </a>
+                         <Link to="/Dashboard'>  <BiUserCircle/>  </Link> 
                     </div>
                     <div className="nav-logo">
                         <img src="/img/logo_black_fill.png" alt="" />
