@@ -2,7 +2,7 @@
 
 
 
-# Pocket Ecom Store
+# Holidaze Venue Booking
 
 ![image](https://prnt.sc/rdKg6A3-3ReA)
 
